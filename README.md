@@ -1,4 +1,4 @@
-# TimeFTP-2P6-CF-INXE-RA
+# TimeFTP-2P6
 
 TimeFTP is the primary software tool used at the UTC (INXE) timescale to execute multiple tasks in parallel with executable subprograms embedded in the RxTools software package (provided by Septentrio). This program utilizes a Python feature called subprocess to call the following RxTools subprograms:
 •	sbf2rin (that converts the proprietary Septentrio Binary File in RINEX);
@@ -12,3 +12,4 @@ It is also important to note:
 4.	The software produces a log file for each MJD;
 5.	The software can be customized to be used by another timescale, other NMI or even a client.
 
+6.	
