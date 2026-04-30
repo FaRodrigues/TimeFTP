@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<labproperties version="2.6" bipmLabCode="10016" bipmLabName="INXE" bipmLabShortPrefix="NX" mainRxID="RA"
+               legacyLongPrefix="NX2P" clockDataPrefix="CD">
+    <identifier desc="DIOPT">INXE</identifier>
+    <utctimezone>-3</utctimezone>
+    <clockproperties>
+        <clockproperty rxid="RA" equipment="Symmetricom 5071A" clockClass="Primary" bipmPrimaryClockCode="1234567"/>
+        <clockproperty rxid="RB" equipment="Symmetricom 5071A" clockClass="Secondary" bipmSecondClockCode="1234567"/>
+    </clockproperties>
+    <gnssproperties rxid="RA">
+        <labid>NX</labid>
+        <rxid>RA</rxid>
+        <ls>18</ls>
+        <dref>211.9</dref>
+        <dcab>124.9</dcab>
+        <dl1>41.6</dl1>
+        <dl2>49.3</dl2>
+        <tref>UTC(INXE)</tref>
+        <px>+4289082.1900</px>
+        <py>-4039527.9300</py>
+        <pz>-2434543.7900</pz>
+        <x>REC</x>
+        <comment>Generated from the SBF</comment>
+        <calid>1012-2020</calid>
+        <revdate>2019-11-21</revdate>
+    </gnssproperties>
+    <gnssproperties rxid="RB">
+        <labid>NX</labid>
+        <rxid>RB</rxid>
+        <ls>18</ls>
+        <dref>46.7</dref>
+        <dcab>70.2</dcab>
+        <dl1>22.0</dl1>
+        <dl2>19.5</dl2>
+        <tref>UTC(INXE)</tref>
+        <px>+4289082.1900</px>
+        <py>-4039527.9300</py>
+        <pz>-2434543.7900</pz>
+        <x>REC</x>
+        <comment>Generated from the SBF</comment>
+        <calid>1201-2025</calid>
+        <revdate>2025-11-28</revdate>
+    </gnssproperties>
+</labproperties>

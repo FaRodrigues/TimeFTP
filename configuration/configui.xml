@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<properties version="2.6" timestamp="2025-09-22T12:50:08.914029">
+  <comment>Propriedades_da_app</comment>
+  <comment>inmetro.gov.br</comment>
+  <entry desc="Modo de Transmissão" chave="tx_modo" render="QComboBox">FTP</entry>
+  <entry desc="Login | APP" chave="appUser" render="QLineEdit">INXE</entry>
+  <entry desc="Senha | APP" chave="appPassword" render="QLineEdit">PT1RUlk1VVM=</entry>
+  <entry desc="Diretório do .EXE SBF2RIN | LOCAL" chave="subprog_dir" render="QLineEdit">C:/Program Files/Septentrio/RxTools/bin</entry>
+  <entry desc="Diretório Raiz | LOCAL" chave="root_disk" render="QToolButton">D:\\</entry>
+  <entry desc="Nome do Laboratório | (LOCAL | REMOTO)" chave="lab_name" render="QLineEdit">INXE</entry>
+  <entry desc="Prefixo do Laboratório | (LOCAL | REMOTO)" chave="lab_id" render="QLineEdit">NX</entry>
+  <entry desc="Identificador do Receptor (RxID) | LOCAL" chave="rx_id" render="QLineEdit">RA</entry>
+  <entry desc="Pasta Local do SBF | LOCAL" chave="local_sbf_to_inm" render="QLineEdit">GNSS/Output</entry>
+  <entry desc="Pasta Local do CGGTTS | LOCAL" chave="local_cggtts_to_inm" render="QLineEdit">GNSS/Output</entry>
+  <entry desc="Pasta Local do RINEX_OBS | LOCAL" chave="local_rinex_to_inm" render="QLineEdit">GNSS/Output</entry>
+  <entry desc="Pasta Cópia do RINEX | LOCAL" chave="store_rinex_to_inm" render="QLineEdit">Links/RINEX</entry>
+  <entry desc="Pasta Cópia do CGGTTS | LOCAL" chave="store_cggtts_to_inm" render="QLineEdit">Links/CGGTTS</entry>
+  <entry desc="Pasta Cópia do CLOCKDATA | LOCAL" chave="store_clockdata_to_inm" render="QLineEdit">Links/CLOCK</entry>
+  <entry desc="Horário de envio | LOCAL" chave="time_env_inm" render="QTimeEdit">00:20:00</entry>
+  <entry desc="Endereço IP / Nome do Servidor | REMOTO" chave="url_scp_inm" render="QLineEdit">5.144.141.242</entry>
+  <entry desc="Senha do usuário | REMOTO" chave="pass_inm" render="QLineEdit">=YVbSdUWWR2USxmWE9kVkVlVrpVRVFjTwImVkllTWZVaVJDaXZ1aJhnVGFUP</entry>
+  <entry desc="Dias de OFFSET" chave="process_offset" render="QLineEdit">0</entry>
+  <entry desc="Processos CGGTTS intermediários" chave="num_tasks" render="QLineEdit">90</entry>
+  <entry desc="Índice do CGGTTS Epoch" chave="epoch_id" render="QComboBox">Último</entry>
+  <entry desc="Versão do arquivo RINEX" chave="rinex_version" render="QLineEdit">304</entry>
+  <entry desc="Diretório de Conversão RIN2CGG | LOCAL" chave="rin2cgg_dir" render="QLineEdit">temp/processacggtts</entry>
+  <entry desc="Gerar Novo RINEX e CGGTTS" chave="gen_newrinexandcgg" render="QCheckBox">true</entry>
+  <entry desc="Compactar RINEX" chave="zip_rinex" render="QCheckBox">true</entry>
+  <entry desc="Gerar CGGTTS GPS" chave="G" render="QCheckBox">true</entry>
+  <entry desc="Gerar CGGTTS GLONASS" chave="R" render="QCheckBox">false</entry>
+  <entry desc="Gerar CGGTTS GALILEO" chave="E" render="QCheckBox">false</entry>
+  <entry desc="Gerar CGGTTS BEIDOU" chave="C" render="QCheckBox">false</entry>
+  <entry desc="GPS Week Number Rollover" chave="gwnr_polarx" render="QLineEdit">7168</entry>
+  <entry desc="Código BIPM | Laboratório" chave="lab_code" render="QLineEdit">10016</entry>
+  <entry desc="Código BIPM | Oscilador" chave="clock_code" render="QLineEdit">1354619</entry>
+  <comment>
+    <entry chave="chave" render="java.lang.String" />
+  </comment>
+</properties>
