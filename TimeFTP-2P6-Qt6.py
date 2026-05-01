@@ -8,6 +8,7 @@ import os
 from pathlib import Path
 import shutil
 import sys
+import subprocess
 import threading
 from queue import Queue
 import time
@@ -45,26 +46,6 @@ def getDateTimeFromMJD(mjd_param):
     tmjd = Time(mjd_param, format='mjd')
     stringdate = Time(tmjd.to_value('iso'), out_subfmt='date_hms').iso
     return datetime.fromisoformat(stringdate)
-
-
-def getEncodedPass(sina, cluster):
-    for x in range(cluster):
-        base64_bytes = sina.encode("utf-8")
-        sina_string_bytes = base64.b64encode(base64_bytes)
-        sina_string = sina_string_bytes.decode("utf-8")
-        sina = sina_string[::-1]
-    return sina
-
-
-def getDecodedPass(sina, cluster):
-    sina_string = ""
-    for x in range(cluster):
-        base64_bytes = sina[::-1].encode("utf-8")
-        sina_string_bytes = base64.b64decode(base64_bytes)
-        sina_string = sina_string_bytes.decode("utf-8")
-        sina = sina_string
-    return sina_string
-
 
 class TaskClass(QObject):
     def __init__(self, dtts, tipo, tmjd, taskmode, parent=None):
@@ -1352,7 +1333,13 @@ class MainWindow(QMainWindow, threading.Thread):
             valor = senderOrig.text()
             chavexml = senderOrig.property('chave')
             if chavexml in ["appPassword", "pass_inm"]:
-                valorxml = getEncodedPass(f"{valor}", 6)
+                cmdpath = os.path.join(".","exefiles")
+                cmdexe = os.path.join(cmdpath,"passcodec.exe")
+                cmd = [cmdexe, 'encode', f'{valor}', '6']
+                process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
+                # with process as proc:
+                valorxml = str(process.stdout.read(), 'utf-8').replace("Encoded: ", '')
+                # valorxml = getEncodedPass(f"{valor}", 6)
             elif chavexml == "process_offset":
                 try:
                     self.setProccessOfset(int(valor.strip()))

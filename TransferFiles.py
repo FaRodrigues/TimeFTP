@@ -4,6 +4,7 @@
 
 import base64
 import os
+import subprocess
 import time
 from collections import deque
 
@@ -29,16 +30,6 @@ def createSSHClient(server, port, user, password):
         # print(f"Erro em createSSHClient: {e}")
         Globvar.setContextMessage([str(e), 'red', 'bold'])
     return client
-
-
-def getDecodedPass(sina, cluster):
-    sina_string = ""
-    for x in range(cluster):
-        base64_bytes = sina[::-1].encode("utf-8")
-        sina_string_bytes = base64.b64decode(base64_bytes)
-        sina_string = sina_string_bytes.decode("utf-8")
-        sina = sina_string
-    return sina_string
 
 
 def getOrigDir(chave_lower):
@@ -164,7 +155,11 @@ def uploadfiles(dictprop, taskclass):
                 # print("contextlink = {}".format(contextlink))
                 try:
                     ftps_client = FTP(contextlink)  # replace with your host name or IP
-                    ftps_client.login(user=contextuser, passwd='{}'.format(getDecodedPass(contextpass, 6)))
+                    cmdpath = os.path.join(".", "exefiles")
+                    cmdexe = os.path.join(cmdpath, "passcodec.exe")
+                    cmd = [cmdexe, 'decode', f'{contextpass}', '6']
+                    process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
+                    ftps_client.login(user=contextuser, passwd='{}'.format(str(process.stdout.read(), 'utf-8').replace("Decoded: ", '')))
                     message = str(ftps_client.getwelcome())
                     print(f"{message}")
 
@@ -326,7 +321,11 @@ def uploadfiles(dictprop, taskclass):
 
                 try:
                     tokenauth = False
-                    ssh = createSSHClient(contextlink, 22, contextuser, getDecodedPass(contextpass, 6))
+                    cmdpath = os.path.join(".", "exefiles")
+                    cmdexe = os.path.join(cmdpath, "passcodec.exe")
+                    cmd = [cmdexe, 'decode', f'{contextpass}', '6']
+                    process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
+                    ssh = createSSHClient(contextlink, 22, contextuser, str(process.stdout.read(), 'utf-8').replace("Decoded: ", ''))
                     tokenconnect = ssh.get_transport()
                     if tokenconnect is not None:
                         tokenauth = tokenconnect.authenticated
