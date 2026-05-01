@@ -13,3 +13,12 @@ It is also important to note:
 5.	The software can be customized to be used by another timescale, other NMI or even a client.
 
 ***Note: Due to security concerns this code do not contain the full features usecin laboratory***
+
+# Getting Started
+
+## Install and Run Dependencies
+
+If you have just downloaded the project and it fails due to missing modules, you may need to install its requirements first:
+
+1. Install dependencies: python -m pip install -r requirements.txt.
+2. Run the script: python TimeFTP.py
