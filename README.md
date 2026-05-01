@@ -1,9 +1,9 @@
 # TimeFTP
 
 TimeFTP is the primary software tool used at the UTC (INXE) timescale to execute multiple tasks in parallel with executable subprograms embedded in the RxTools software package (provided by Septentrio). This program utilizes a Python feature called subprocess to call the following RxTools subprograms:
-•	sbf2rin (that converts the proprietary Septentrio Binary File in RINEX);
-•	rin2cgg (that converts RINEX in CGGTTS);
-•	sbf2cgg (that converts the proprietary Septentrio Binary File in CGGTTS);
+  •	sbf2rin (that converts the proprietary Septentrio Binary File in RINEX);
+  •	rin2cgg (that converts RINEX in CGGTTS);
+  •	sbf2cgg (that converts the proprietary Septentrio Binary File in CGGTTS);
 
 In addition, since the Python subprocess feature allows the calling with parameters of any executable program, we also automatize the R2CGGTTS (the software tool developed at the Royal Observatory of Belgium, in its version 8.3 and 8.8). In this way, the TimeFTP software works extending some functionalities that are not provided by the GNSS receiver manufacturer and other programs used in the routine calculations of a simple timescale. 
 
