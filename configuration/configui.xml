@@ -18,7 +18,7 @@
   <entry desc="Pasta Cópia do CLOCKDATA | LOCAL" chave="store_clockdata_to_inm" render="QLineEdit">Links/CLOCK</entry>
   <entry desc="Horário de envio | LOCAL" chave="time_env_inm" render="QTimeEdit">00:20:00</entry>
   <entry desc="Endereço IP / Nome do Servidor | REMOTO" chave="url_scp_inm" render="QLineEdit">5.144.141.242</entry>
-  <entry desc="Senha do usuário | REMOTO" chave="pass_inm" render="QLineEdit">=YVbSdUWWR2USxmWE9kVkVlVrpVRVFjTwImVkllTWZVaVJDaXZ1aJhnVGFUP</entry>
+  <entry desc="Senha do usuário | REMOTO" chave="pass_inm" render="QLineEdit"></entry>
   <entry desc="Dias de OFFSET" chave="process_offset" render="QLineEdit">0</entry>
   <entry desc="Processos CGGTTS intermediários" chave="num_tasks" render="QLineEdit">90</entry>
   <entry desc="Índice do CGGTTS Epoch" chave="epoch_id" render="QComboBox">Último</entry>
