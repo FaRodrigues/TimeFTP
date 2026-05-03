@@ -10,7 +10,7 @@ In addition, since the Python subprocess feature allows the calling with paramet
 
 This software allows for the seamless integration of different proprietary systems, enabling the automation of both older GNSS receivers, such as the PolaRx3TR and PolaRx5TR models, and any other receiver with a programmable interface.The software incorporates SCP (Secure Copy Protocol) and FTP (File Transfer Protocol) communications and, in this way, we can send the RINEX, CGGTTS and CLOCK files to the TAI repository using FTP while we are able to send files to other repositories using SCP.
 
-It is also important to note:
+### It is also important to note:
 1.	The software is cross platform and so it works on both Windows and Linux;
 2.	TimeFTP synchronizes its transmission with the last value of the STTIME column in the CGGTTS data, allowing data transmission at 16-minute intervals;
 3.	The TimeFTP user interface is self-described in a XML file allowing the fast customization and adaptation;
