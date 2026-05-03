@@ -17,7 +17,7 @@ It is also important to note:
 4.	The software produces a log file for each MJD;
 5.	The software can be customized to be used by another timescale, other NMI or even a client.
 
-***Note: Due to security concerns this code do not contain the full features usecin laboratory***
+***Note: Due to security concerns this code do not contain the full features used in laboratory***
 
 # Getting Started
 
