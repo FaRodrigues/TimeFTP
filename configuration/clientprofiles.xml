@@ -3,7 +3,7 @@
   <profile labname="INXE" commtype="FTP">
     <accesslink>5.144.141.242</accesslink>
     <username>INXE</username>
-    <password>=YVbSdUWWR2USxmWE9kVkVlVrpVRVFjTwImVkllTWZVaVJDaXZ1aJhnVGFUP</password>
+    <password></password>
     <labid>NX</labid>
     <rxid>RA</rxid>
   </profile>
